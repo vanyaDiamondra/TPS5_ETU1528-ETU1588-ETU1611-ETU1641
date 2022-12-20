@@ -1,5 +1,6 @@
-import { IonHeader, IonToolbar, IonTitle } from '@ionic/react'
-import React from 'react'
+import { IonHeader, IonToolbar, IonTitle, IonIcon } from '@ionic/react';
+import React from 'react';
+import { airplane } from 'ionicons/icons';
 
 type Props = {}
 
@@ -7,7 +8,7 @@ const Header = (props: Props) => {
   return (
     <IonHeader>
       <IonToolbar>
-        <IonTitle>Flotte-Auto</IonTitle>
+        <IonTitle><IonIcon icon={airplane} /> Air</IonTitle>
       </IonToolbar>
     </IonHeader>
   )

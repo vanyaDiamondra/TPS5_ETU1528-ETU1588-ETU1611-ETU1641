@@ -26,8 +26,7 @@ const FormLogin = () => {
       if( status === "200" ){
         const token = dataResponse.token;
         localStorage.setItem('token', token);
-        router.push('/listevehicule');
-
+        router.push('/airplaneList');
       } else {
         presentAlert({
           header: 'Erreur',
@@ -47,7 +46,7 @@ const FormLogin = () => {
             <IonCol>
             <IonItem>
                 <IonLabel position="floating"> Email</IonLabel>
-                <IonInput  type="email" ref={emailRef}  ></IonInput>
+                <IonInput  type="email" ref={emailRef} value="admin@gmail.com" ></IonInput>
             </IonItem>
             </IonCol>
         </IonRow>
@@ -55,7 +54,7 @@ const FormLogin = () => {
             <IonCol>
             <IonItem>
                 <IonLabel position="floating"> Pasword</IonLabel>
-                <IonInput  type="password" ref={mdpRef} ></IonInput>
+                <IonInput  type="password" ref={mdpRef} value="admin"></IonInput>
             </IonItem>
             </IonCol>
         </IonRow>

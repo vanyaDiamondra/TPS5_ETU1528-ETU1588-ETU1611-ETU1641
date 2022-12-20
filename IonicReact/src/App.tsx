@@ -2,8 +2,12 @@ import { Redirect, Route } from 'react-router-dom';
 import { IonApp, IonButtons, IonContent, IonHeader, IonMenu, IonMenuButton, IonPage, IonRouterOutlet, IonTitle, IonToolbar, setupIonicReact } from '@ionic/react';
 import { IonReactRouter } from '@ionic/react-router';
 
-import VehiculeList from './pages/listeVehicule/Liste';
+import AirplaneList from './pages/airplaneList/Liste';
 import Login from './pages/login/Login'
+import FindAirplane from './components/FindAirplane';
+import Assurance from './pages/assurance/Assurance';
+import ListThreeMonth from './pages/airplaneExpired/ThreeMonth/Liste';
+import ListOneMonth from './pages/airplaneExpired/OneMonth/Liste';
 
 /* Core CSS required for Ionic components to work properly */
 import '@ionic/react/css/core.css';
@@ -31,7 +35,11 @@ const App: React.FC = () => (
     <IonReactRouter>
       <IonRouterOutlet>
         <Route exact path="/"><Login /></Route>
-        <Route exact path="/listevehicule"><VehiculeList/></Route>
+        <Route exact path="/airplaneList"><AirplaneList/></Route>
+        <Route path="/airplaneDetail/:id"><FindAirplane/></Route>
+        <Route path="/assurance"><Assurance/></Route>
+        <Route path="/assuranceOneMonth"><ListOneMonth/></Route>
+        <Route path="/assuranceThreeMonth"><ListThreeMonth/></Route>
       </IonRouterOutlet>
     </IonReactRouter>
   </IonApp>
